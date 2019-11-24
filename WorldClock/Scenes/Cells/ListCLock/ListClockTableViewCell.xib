@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ListClockTableViewCell" rowHeight="90" id="KGk-i7-Jjw" customClass="ListClockTableViewCell" customModule="WorldClock" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="339" height="90"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="339" height="89.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WRs-LR-cQD">
+                        <rect key="frame" x="0.0" y="0.0" width="65" height="65"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="65" id="gHo-op-WaB"/>
+                            <constraint firstAttribute="height" constant="65" id="kHR-OH-bKe"/>
+                        </constraints>
+                    </imageView>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="k0S-T0-igB">
+                        <rect key="frame" x="97" y="8" width="42" height="58.5"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="City" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="gTS-rr-ZXY">
+                                <rect key="frame" x="0.0" y="0.0" width="42" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="WPt-wd-qNE">
+                                <rect key="frame" x="0.0" y="38" width="42" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                    </stackView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Day" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="qhR-Zn-Du0">
+                        <rect key="frame" x="285.5" y="8" width="29.5" height="20.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="WRs-LR-cQD" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="7z6-Us-SPP"/>
+                    <constraint firstItem="WRs-LR-cQD" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="MAV-v7-bmf"/>
+                    <constraint firstItem="k0S-T0-igB" firstAttribute="leading" secondItem="WRs-LR-cQD" secondAttribute="trailing" constant="32" id="hW0-Uu-fvc"/>
+                    <constraint firstItem="qhR-Zn-Du0" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="jAB-EL-A7A"/>
+                    <constraint firstAttribute="trailing" secondItem="qhR-Zn-Du0" secondAttribute="trailing" constant="24" id="nqd-pr-7Gl"/>
+                    <constraint firstItem="k0S-T0-igB" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="vwb-6x-tAe"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="cityLabel" destination="gTS-rr-ZXY" id="BtJ-vC-afP"/>
+                <outlet property="clockImage" destination="WRs-LR-cQD" id="WM8-Fz-QDD"/>
+                <outlet property="dayLabel" destination="qhR-Zn-Du0" id="qY0-Af-Pnf"/>
+                <outlet property="timeLabel" destination="WPt-wd-qNE" id="zJx-li-vtb"/>
+            </connections>
+            <point key="canvasLocation" x="151.44927536231884" y="168.75"/>
+        </tableViewCell>
+    </objects>
+</document>
